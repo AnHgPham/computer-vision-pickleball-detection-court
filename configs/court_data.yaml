@@ -1,0 +1,22 @@
+# Court Keypoint Detection - Dataset Config
+# Dataset: pb-9bsin (v5) from Roboflow
+# Format: YOLOv8-Pose
+
+path: ./data/court_keypoints
+train: train/images
+val: valid/images
+test: test/images
+
+# 1 class: court
+nc: 1
+names:
+  - court
+
+# 12 keypoints, each with (x, y, visibility)
+kpt_shape: [12, 3]
+
+# flip_idx: symmetry mapping when horizontally flipping
+# Swaps left-right keypoint pairs:
+# 0 <-> 2, 3 <-> 5, 6 <-> 8, 9 <-> 11 (corners)
+# 1, 4, 7, 10 stay in place (center points)
+flip_idx: [2, 1, 0, 5, 4, 3, 8, 7, 6, 11, 10, 9]

@@ -1,0 +1,13 @@
+# Ball Detection - Dataset Config
+# Dataset: annotations_pickleball (v8) from Roboflow
+# Format: YOLOv8
+
+path: ./data/ball_detection
+train: train/images
+val: valid/images
+test: test/images
+
+# 1 class: ball
+nc: 1
+names:
+  - ball
